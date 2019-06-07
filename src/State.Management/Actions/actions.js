@@ -58,3 +58,15 @@ export const makeRequestForSlider = () => {
             .catch(error.message)
     }
 }
+
+export const goToLeft = () => {
+    return {
+        type:'GO_TO_LEFT'
+    }
+}
+
+export const goToRight = () => {
+    return {
+        type:'GO_TO_RIGHT'
+    }
+}

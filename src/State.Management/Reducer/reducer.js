@@ -5,6 +5,7 @@ const initialState = {
     films: [],
     slider:[],
     currentIndex: 0,
+    translateValue: 0,
 }
 
 const reducer = (state = initialState, action) => {
@@ -37,6 +38,13 @@ const reducer = (state = initialState, action) => {
         }
         console.log('stateAfterSLiderRequset',stateAfterSLiderRequset)
         return stateAfterSLiderRequset;
+    }
+    else if(action.type === 'GO_TO_RIGHT') {
+         newState.currentIndex += 1;
+
+    }
+    else if(action.type === 'GO_TO_LEFT') {
+        newState.currentIndex -= 1;
     }
     return newState;
 }
