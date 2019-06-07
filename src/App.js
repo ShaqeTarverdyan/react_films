@@ -7,7 +7,7 @@ import Home from '../src/Components/Home';
 import Films from '../src/Components/Films';
 import Contact from '../src/Components/Contact';
 import FilmDescription from '../src/Components/FilmDescription';
-import TestCarousel from '../src/Components/Slide/slider';
+import Slider from '../src/Components/Slide/slider';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Route path='/' exact component={Home} />
             <Route path='/films' exact component={Films} />
             <Route path='/contact' exact component={Contact} />
-            <Route path='/slider' exact component={TestCarousel} />
+            <Route path='/slider' exact component={Slider} />
             <Route path='/:id' component={FilmDescription}/>
         </Switch>
       </Router>
