@@ -1,3 +1,4 @@
+import '../../Components/Slider1/styles.css';
 const initialState = {
     loading: false,
     error: '',
@@ -41,23 +42,31 @@ const reducer = (state = initialState, action) => {
     }
     else if (action.type === 'GO_TO_RIGHT') {
 
-        const sliderimages = newState.slider.map(item => 
-            item.map((currentImage, id) => (
-                 currentImage
-            ))
-        )
-        if (newState.currentIndex === sliderimages[0].length - 1) {
-                newState.currentIndex = 0;
-                newState.translateValue = 0
+        const slideWidth = () => {
+            const elem = document.querySelector('.slide').clientWidth
+            return elem
         }
-        newState.currentIndex += 1;
-        newState.translateValue -= 1;//error
-
+        console.log('slideWidth',slideWidth())
+        console.log('slider', newState.slider);
+        const sliderImages = newState.slider.map(item => (
+           console.log('item',item),
+           item.map(cur => (
+                console.log('cur',cur)
+           ))
+        ));
+        console.log('sliderImages',sliderImages.length)
+        if (newState.currentIndex === sliderImages.length - 1) {
+                newState.currentIndex = 0
+                newState.translateValue= 0
+        }  
+  
+        newState.currentIndex +=  1;
+        newState.translateValue -=  (slideWidth())
     }
 
     else if (action.type === 'GO_TO_LEFT') {
-        return newState.currentIndex -= 1;
     }
+
     return newState;
 }
 

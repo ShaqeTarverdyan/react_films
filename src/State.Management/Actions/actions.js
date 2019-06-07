@@ -1,3 +1,4 @@
+import '../../Components/Slider1/styles.css';
 export const getInputvalue = (event) => {
     return {
         type:'GET_INPUT_VALUE',
@@ -68,5 +69,11 @@ export const goToLeft = () => {
 export const goToRight = () => {
     return {
         type:'GO_TO_RIGHT'
+    }
+}
+
+export const slideWidth = () => {
+    return {
+        type:'SLIDE_WIDTH'
     }
 }

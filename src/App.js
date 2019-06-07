@@ -8,6 +8,7 @@ import Films from '../src/Components/Films';
 import Contact from '../src/Components/Contact';
 import FilmDescription from '../src/Components/FilmDescription';
 import Slider from '../src/Components/Slide/slider';
+import Slider_Redux from '../src/Components/Slider1/Slider';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
             <Route path='/films' exact component={Films} />
             <Route path='/contact' exact component={Contact} />
             <Route path='/slider' exact component={Slider} />
+            <Route path='/Slider_Redux' exact component={Slider_Redux} />
+            <Route path='/slider_test' exact component={Slider} />
             <Route path='/:id' component={FilmDescription}/>
         </Switch>
       </Router>

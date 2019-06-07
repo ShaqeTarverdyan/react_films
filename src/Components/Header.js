@@ -12,6 +12,7 @@ const Header = () => {
                     <Menu.Item as={Link} to='/films'>Films</Menu.Item>
                     <Menu.Item as={Link} to='/contact'>Contact</Menu.Item>
                     <Menu.Item as={Link} to='/slider'>Slider</Menu.Item>
+                    <Menu.Item as={Link} to='/Slider_Redux'>Slider_Redux</Menu.Item>
                     <Menu.Item position='right'>
                         <SearchForm/>
                     </Menu.Item>

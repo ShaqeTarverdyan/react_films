@@ -44,8 +44,10 @@ class Slider extends React.Component {
     }
 
 goToNextSlide = () => {
+    console.log('zzz',this.state.slider)
     const sliderImages = this.state.slider.map(item => (
-        item.image
+        console.log('pppp',item)
+        // item.image
     ))
     if (this.state.currentIndex === sliderImages.length - 1) {
         return this.setState({
@@ -55,11 +57,11 @@ goToNextSlide = () => {
     }
     this.setState(prevState => ({
         currentIndex: prevState.currentIndex + 1,
-        translateValue: prevState.translateValue + -(this.slideWidth())
+        translateValue: prevState.translateValue  -(this.slideWidth())
     }))
 }
 slideWidth = () => {
-   return document.querySelector('.slide').clientWidth;;
+   return document.querySelector('.slide').clientWidth;
 }
 render() {
     return (
